@@ -1,6 +1,5 @@
 var app = new Vue({
   el: "#app",
-
   data: {
     storageKey: "todolist",
     isEditing: false,
@@ -23,9 +22,6 @@ var app = new Vue({
 
     updateTodo() {
       this.todos.splice(this.selectedIndex, 1, { text: this.todo });
-      //この後に何か入る？？？
-      //更新ボタンを押した時の処理
-
       this.todo = "";
       this.isEditing = false;
     },
@@ -45,7 +41,6 @@ var app = new Vue({
   watch: {
     todos: {
       handler: function () {
-        // 保存
         localStorage.setItem(this.storageKey, JSON.stringify(this.todos));
       },
       deep: true,
