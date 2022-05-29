@@ -13,7 +13,6 @@ var app = new Vue({
       this.todos = JSON.parse(dataStr);
     }
   },
-  
 
   methods: {
     storeTodo() {
